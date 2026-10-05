@@ -9,10 +9,8 @@
   <!-- Custom High-Impact Animated Header Banner -->
   <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/header.svg" width="100%" alt="Kiran Chand S Header" />
 
-  <!-- Animated Typing Subtitles -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1200&color=38BDF8&center=true&vCenter=true&width=640&lines=Full+Stack+Software+Engineer;Next.js+16+%E2%80%A2+React+19+%E2%80%A2+TypeScript;Python+%E2%80%A2+Django+REST+%E2%80%A2+WebSockets;Applied+AI+%E2%80%A2+Computer+Vision+%E2%80%A2+AWS+Cloud;Architecting+Scalable+%26+Real-Time+Systems" alt="Typing SVG" />
-  </a>
+  <!-- Animated Typing Subtitles (Non-clickable styling) -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1200&color=38BDF8&center=true&vCenter=true&width=640&lines=Full+Stack+Software+Engineer;Next.js+16+%E2%80%A2+React+19+%E2%80%A2+TypeScript;Python+%E2%80%A2+Django+REST+%E2%80%A2+WebSockets;Applied+AI+%E2%80%A2+Computer+Vision+%E2%80%A2+AWS+Cloud;Architecting+Scalable+%26+Real-Time+Systems" alt="Typing SVG" />
 
   <br /><br />
 
@@ -106,9 +104,7 @@
 <table width="100%" border="0">
   <tr>
     <td width="50%" valign="top">
-      <a href="https://dispatchr-reporter.vercel.app">
-        <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-dispatchr.svg" width="100%" alt="DispatchR" />
-      </a>
+      <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-dispatchr.svg" width="100%" alt="DispatchR" />
       <br /><br />
       <h3 align="center">📊 DispatchR Reporting Suite</h3>
       <p>Enterprise reporting web application architected during my internship at <b>Alpha Innovation</b>.</p>
@@ -122,9 +118,7 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/kiran-atcore/DeepFakeDetection">
-        <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-deepfake.svg" width="100%" alt="DeepFake Detection" />
-      </a>
+      <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-deepfake.svg" width="100%" alt="DeepFake Detection" />
       <br /><br />
       <h3 align="center">🛡️ DeepFake Detection Engine</h3>
       <p>High-accuracy media manipulation detection engine trained on FaceForensics++ & DFDC datasets.</p>
@@ -140,9 +134,7 @@
   <tr>
     <td width="50%" valign="top">
       <br />
-      <a href="https://drive.google.com/file/d/10BrKVremhE2PoB2JNfGaSQBHBeE0Z2Q0/view">
-        <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-vicinio.svg" width="100%" alt="Vicinio Local Worker Finder" />
-      </a>
+      <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-vicinio.svg" width="100%" alt="Vicinio Local Worker Finder" />
       <br /><br />
       <h3 align="center">📍 Vicinio — Local Worker Finder</h3>
       <p>Hyper-local peer-to-peer on-demand service marketplace connecting verified workers with users.</p>
@@ -157,9 +149,7 @@
     </td>
     <td width="50%" valign="top">
       <br />
-      <a href="https://kiranchands.vercel.app/">
-        <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-portfolio.svg" width="100%" alt="Interactive 3D Developer Portfolio" />
-      </a>
+      <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/project-portfolio.svg" width="100%" alt="Interactive 3D Developer Portfolio" />
       <br /><br />
       <h3 align="center">🌐 3D Interactive Portfolio</h3>
       <p>Personal engineering portfolio featuring interactive 3D WebGL canvases and case study deep-dives.</p>
