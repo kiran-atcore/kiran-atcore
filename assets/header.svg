@@ -1,86 +1,149 @@
-<svg width="100%" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="320" viewBox="0 0 1000 320" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080C15" />
-      <stop offset="50%" stop-color="#0D1527" />
-      <stop offset="100%" stop-color="#141E36" />
+    <!-- Background Gradients -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    
+    <radialGradient id="glow-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F8FAFC">
+        <animate attributeName="stop-color" values="#F8FAFC; #BAE6FD; #F8FAFC" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8; #818CF8; #38BDF8" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#F8FAFC">
+        <animate attributeName="stop-color" values="#F8FAFC; #BAE6FD; #F8FAFC" dur="4s" repeatCount="indefinite" />
+      </stop>
     </linearGradient>
 
-    <!-- Border Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.4" />
-      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1" />
+    <!-- Glowing Lines -->
+    <linearGradient id="line-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    
+    <linearGradient id="line-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Title Gradient -->
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="60%" stop-color="#E2E8F0" />
-      <stop offset="100%" stop-color="#38BDF8" />
-    </linearGradient>
-
-    <!-- Accent Bar Gradient -->
-    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="35%" stop-color="#818CF8" />
-      <stop offset="70%" stop-color="#C084FC" />
-      <stop offset="100%" stop-color="#38BDF8" />
-    </linearGradient>
-
-    <!-- Glow Pill Gradient -->
-    <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.1" />
-    </linearGradient>
-
-    <!-- Glow Filter -->
-    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="30" result="blur" />
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    <filter id="pill-blur" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-    </filter>
 
-    <!-- Grid Pattern -->
-    <pattern id="header-grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#38BDF8" stroke-opacity="0.04" stroke-width="1" />
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38BDF8" stroke-opacity="0.05" stroke-width="1"/>
     </pattern>
   </defs>
 
-  <!-- Card Background -->
-  <rect width="900" height="220" rx="16" fill="url(#bg-grad)" />
+  <style>
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -1000;
+      }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse-opacity {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+    .grid-bg { opacity: 0.6; }
+    .data-stream-1 {
+      stroke-dasharray: 100 200;
+      animation: dash 15s linear infinite;
+    }
+    .data-stream-2 {
+      stroke-dasharray: 50 300;
+      animation: dash 20s linear infinite reverse;
+    }
+    .cursor {
+      animation: pulse-opacity 1s step-end infinite;
+    }
+    .floating-element {
+      animation: float 6s ease-in-out infinite;
+    }
+    .floating-element-delayed {
+      animation: float 8s ease-in-out infinite 2s;
+    }
+  </style>
 
-  <!-- Ambient Glow Orbs -->
-  <circle cx="90" cy="40" r="110" fill="#38BDF8" fill-opacity="0.16" filter="url(#glow-blur)" />
-  <circle cx="820" cy="180" r="120" fill="#818CF8" fill-opacity="0.18" filter="url(#glow-blur)" />
+  <!-- Base Layer -->
+  <rect width="1000" height="320" rx="20" fill="url(#bg)"/>
+  <rect width="1000" height="320" rx="20" fill="url(#grid)" class="grid-bg"/>
+  <circle cx="500" cy="160" r="400" fill="url(#glow-center)"/>
 
-  <!-- Background Grid Overlay -->
-  <rect width="900" height="220" rx="16" fill="url(#header-grid)" />
-
-  <!-- Outer Border -->
-  <rect x="1" y="1" width="898" height="218" rx="15" fill="none" stroke="url(#border-grad)" stroke-width="1.5" />
-
-  <!-- Floating Pill Badge -->
-  <g transform="translate(270, 36)">
-    <rect width="360" height="28" rx="14" fill="url(#pill-grad)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1" />
-    <circle cx="16" cy="14" r="4" fill="#38BDF8" />
-    <text x="30" y="18" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">FULL STACK DEVELOPER &amp; APPLIED AI</text>
+  <!-- Animated Data Streams (Background) -->
+  <g opacity="0.4">
+    <!-- Stream 1 -->
+    <path d="M 0 80 Q 250 120 500 80 T 1000 80" fill="none" stroke="url(#line-grad-1)" stroke-width="2" class="data-stream-1"/>
+    <path d="M 0 80 Q 250 120 500 80 T 1000 80" fill="none" stroke="url(#line-grad-1)" stroke-width="6" opacity="0.3" class="data-stream-1"/>
+    
+    <!-- Stream 2 -->
+    <path d="M 0 240 Q 250 200 500 240 T 1000 240" fill="none" stroke="url(#line-grad-2)" stroke-width="1.5" class="data-stream-2"/>
+    <path d="M 0 240 Q 250 200 500 240 T 1000 240" fill="none" stroke="url(#line-grad-2)" stroke-width="5" opacity="0.2" class="data-stream-2"/>
   </g>
 
-  <!-- Main Name Title -->
-  <text x="450" y="118" text-anchor="middle" fill="url(#title-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-0.5">KIRAN CHAND S</text>
+  <!-- Cybernetic Nodes (Floating) -->
+  <g class="floating-element">
+    <circle cx="150" cy="90" r="3" fill="#38BDF8" filter="url(#neon-glow)"/>
+    <circle cx="150" cy="90" r="10" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+    <line x1="150" y1="90" x2="220" y2="60" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="1"/>
+    <circle cx="220" cy="60" r="1.5" fill="#38BDF8"/>
+  </g>
 
-  <!-- Subtitle Tagline -->
-  <text x="450" y="152" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2.5">NEXT.JS 16 • PYTHON &amp; DJANGO REST • WEBSOCKETS • AWS CLOUD</text>
+  <g class="floating-element-delayed">
+    <circle cx="850" cy="220" r="4" fill="#818CF8" filter="url(#neon-glow)"/>
+    <circle cx="850" cy="220" r="12" stroke="#818CF8" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+    <line x1="850" y1="220" x2="780" y2="250" stroke="#818CF8" stroke-opacity="0.2" stroke-width="1"/>
+    <circle cx="780" cy="250" r="2" fill="#818CF8"/>
+  </g>
 
-  <!-- Tech Dots / Stars Decor -->
-  <circle cx="180" cy="110" r="1.5" fill="#38BDF8" fill-opacity="0.5" />
-  <circle cx="210" cy="75" r="2" fill="#818CF8" fill-opacity="0.6" />
-  <circle cx="720" cy="80" r="1.5" fill="#38BDF8" fill-opacity="0.5" />
-  <circle cx="690" cy="125" r="2" fill="#C084FC" fill-opacity="0.6" />
+  <!-- Central Badge -->
+  <g transform="translate(380, 50)">
+    <rect width="240" height="32" rx="16" fill="#0F172A" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.5"/>
+    <rect width="240" height="32" rx="16" fill="#38BDF8" fill-opacity="0.1"/>
+    <circle cx="20" cy="16" r="4" fill="#38BDF8" filter="url(#neon-glow)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="21" fill="#BAE6FD" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">INITIALIZING ARCHITECT</text>
+  </g>
 
-  <!-- Bottom Accent Bar -->
-  <rect x="0" y="216" width="900" height="4" rx="2" fill="url(#accent-grad)" />
+  <!-- Main Typography -->
+  <text x="500" y="160" text-anchor="middle" fill="url(#text-grad)" font-family="-apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="2">
+    KIRAN CHAND S
+  </text>
+  
+  <text x="500" y="210" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, monospace" font-size="16" font-weight="500" letter-spacing="4">
+    SOFTWARE ENGINEER <tspan fill="#38BDF8">•</tspan> FULL STACK <tspan fill="#818CF8">•</tspan> APPLIED AI
+  </text>
+
+  <!-- Terminal Typing Effect Simulation -->
+  <g transform="translate(500, 260)">
+    <rect x="-180" y="-15" width="360" height="30" rx="6" fill="#020617" stroke="#1E293B" stroke-width="1"/>
+    <text x="-160" y="5" fill="#10B981" font-family="monospace" font-size="14" font-weight="600">
+      <tspan fill="#A78BFA">~</tspan> $ ./deploy_systems.sh
+    </text>
+    <rect x="25" y="-7" width="8" height="14" fill="#10B981" class="cursor"/>
+  </g>
+
+  <!-- Border Highlight -->
+  <rect width="1000" height="320" rx="20" fill="none" stroke="url(#line-grad-1)" stroke-width="2" opacity="0.5"/>
 </svg>

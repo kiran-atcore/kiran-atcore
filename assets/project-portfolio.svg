@@ -1,0 +1,60 @@
+<svg width="100%" height="160" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#A855F7" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="160" rx="12" fill="url(#bg)"/>
+  <rect width="400" height="160" rx="12" fill="url(#grid)"/>
+
+  <!-- 3D Cube / WebGL Concept -->
+  <g transform="translate(200, 80)" filter="url(#glow)">
+    <!-- Back faces -->
+    <path d="M 0 -20 L 34.64 -40 L 0 -60 L -34.64 -40 Z" fill="#A855F7" fill-opacity="0.2"/>
+    
+    <!-- Animated Cube -->
+    <g stroke="url(#primary)" stroke-width="2" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="0; 360" dur="20s" repeatCount="indefinite"/>
+      
+      <!-- Edges -->
+      <path d="M 0 0 L 0 40 M 0 0 L -34.64 -20 M 0 0 L 34.64 -20"/>
+      <path d="M 0 40 L -34.64 20 L -34.64 -20 M 0 40 L 34.64 20 L 34.64 -20 M -34.64 -20 L 0 -40 L 34.64 -20"/>
+      
+      <!-- Nodes -->
+      <circle cx="0" cy="0" r="3" fill="#EC4899"/>
+      <circle cx="0" cy="40" r="3" fill="#EC4899"/>
+      <circle cx="-34.64" cy="-20" r="3" fill="#EC4899"/>
+      <circle cx="34.64" cy="-20" r="3" fill="#EC4899"/>
+      <circle cx="-34.64" cy="20" r="3" fill="#EC4899"/>
+      <circle cx="34.64" cy="20" r="3" fill="#EC4899"/>
+      <circle cx="0" cy="-40" r="3" fill="#EC4899"/>
+    </g>
+
+    <!-- Floating Particles -->
+    <circle cx="-80" cy="-20" r="2" fill="#EC4899">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="70" cy="30" r="1.5" fill="#A855F7">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,15; 0,0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="-30" r="2.5" fill="#EC4899">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -10,0; 0,0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

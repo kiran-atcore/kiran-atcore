@@ -1,0 +1,65 @@
+<svg width="100%" height="160" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38BDF8" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="160" rx="12" fill="url(#bg)"/>
+  <rect width="400" height="160" rx="12" fill="url(#dots)"/>
+
+  <!-- Server / Database Stack -->
+  <g transform="translate(180, 40)" stroke="url(#primary)" stroke-width="2" fill="#0F172A" filter="url(#glow)">
+    <rect x="0" y="0" width="60" height="20" rx="4"/>
+    <rect x="0" y="30" width="60" height="20" rx="4"/>
+    <rect x="0" y="60" width="60" height="20" rx="4"/>
+    
+    <!-- Blinking lights -->
+    <circle cx="10" cy="10" r="3" fill="#38BDF8">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="10" cy="40" r="3" fill="#38BDF8">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="10" cy="70" r="3" fill="#38BDF8">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Data flow lines -->
+  <path d="M 120 80 Q 150 50 180 50" fill="none" stroke="url(#primary)" stroke-width="2" stroke-dasharray="4 4">
+    <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite" linear="true"/>
+  </path>
+  <path d="M 120 80 Q 150 110 180 110" fill="none" stroke="url(#primary)" stroke-width="2" stroke-dasharray="4 4">
+    <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite" linear="true"/>
+  </path>
+
+  <!-- Report icon -->
+  <g transform="translate(80, 60)" fill="none" stroke="#38BDF8" stroke-width="2">
+    <rect x="0" y="0" width="30" height="40" rx="2"/>
+    <line x1="8" y1="10" x2="22" y2="10"/>
+    <line x1="8" y1="20" x2="22" y2="20"/>
+    <line x1="8" y1="30" x2="16" y2="30"/>
+  </g>
+
+  <!-- Analytics Chart -->
+  <g transform="translate(280, 50)" fill="none" stroke="#818CF8" stroke-width="2" filter="url(#glow)">
+    <polyline points="0,40 10,25 20,35 30,10 40,20"/>
+    <circle cx="40" cy="20" r="3" fill="#818CF8"/>
+  </g>
+</svg>
