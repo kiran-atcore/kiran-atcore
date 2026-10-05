@@ -7,8 +7,8 @@
 
 <div align="center">
 
-  <!-- Dynamic Animated Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,14,26,42&height=220&section=header&text=Kiran%20Chand%20S&fontSize=48&fontAlignY=38&animation=twinkling&desc=Software%20Engineer%20%7C%20Full%20Stack%20%26%20Applied%20AI%20Builder&descAlignY=58&descAlign=50" width="100%" alt="Kiran Chand S Header" />
+  <!-- Custom High-Impact Header Banner -->
+  <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/header.svg" width="100%" alt="Kiran Chand S Header" />
 
   <!-- Animated Typing Subtitles -->
   <a href="https://git.io/typing-svg">
@@ -23,7 +23,7 @@
       <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
     &nbsp;
-    <a href="https://dispatchr-reporter.vercel.app" target="_blank">
+    <a href="https://kiranchands.vercel.app/" target="_blank">
       <img src="https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
     </a>
     &nbsp;
@@ -203,7 +203,7 @@ motto: "Transforming complex business logic into deterministic, performant code.
       </ul>
       <p align="center">
         <a href="https://github.com/kiran-atcore/PortfolioWebsite"><b>💻 Source Code</b></a> •
-        <a href="https://dispatchr-reporter.vercel.app"><b>🌐 Live Demo</b></a>
+        <a href="https://kiranchands.vercel.app/"><b>🌐 Live Demo</b></a>
       </p>
     </td>
   </tr>
@@ -264,12 +264,13 @@ motto: "Transforming complex business logic into deterministic, performant code.
     <img src="https://img.shields.io/badge/kiranchand.0987%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   &nbsp;
-  <a href="https://dispatchr-reporter.vercel.app">
+  <a href="https://kiranchands.vercel.app/">
     <img src="https://img.shields.io/badge/Portfolio_Website-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio Website" />
   </a>
 
   <br /><br />
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,14,26,42&height=100&section=footer" width="100%" alt="Footer Banner" />
+  <!-- Modern Accent Footer Divider -->
+  <img src="https://raw.githubusercontent.com/kiran-atcore/kiran-atcore/main/assets/footer.svg" width="100%" alt="Footer Accent" />
 
 </div>
